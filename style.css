@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0;
+}
+
+html, body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tampilan-menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    column-gap: 8px;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 2vh;
+}
+
+article {
+    width: 90%;
+}
+
+tr, td, th {
+    border: 2px solid black;
+    padding: 8px 12px;
+}
+
+tr:nth-child(odd):hover{
+    background-color: rgb(240, 228, 228);
+} 
+
+
+tr:first-child{
+    background-color: rgb(240, 228, 228);
+}
+
+tr:last-child:hover {
+    background-color: rgb(240, 228, 228);
+}
+
+.form-pesanan {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+}
+
+.p {
+    display: flex;
+    gap: 10px;
+}
+
+.container-pesanan {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-pesanan-makanan {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container-pesanan-minuman {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.container-pesanan-tambahan {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    width: 120px;
+    text-align: justify;
+}
+
+input[type="number"]{
+    width: 70px;
+}
+
+.check {
+    display: inline;
+}

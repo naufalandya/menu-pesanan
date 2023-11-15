@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    
+
+<article>
+    
+    <h1>Daftar Menu</h1>
+
+<div class="tampilan-menu">
+
+
+    <table>
+        <tr>
+            <th colspan="3">Makanan</th>
+        </tr>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Harga</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Nasi Goreng</td>
+            <td>15000</td>
+        </tr>
+
+        
+        <tr>
+            <td>2</td>
+            <td>Ayam Goreng</td>
+            <td>7000</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Baso Urat</td>
+            <td>12000</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Sate Ayam</td>
+            <td>14000</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Mie Ayam</td>
+            <td>10000</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Mie Instant</td>
+            <td>7000</td>
+        </tr>
+
+
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="3">Minuman</th>
+        </tr>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Harga</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Air Putih</td>
+            <td>1000</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Teh Manis/Anget</td>
+            <td>5000</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Es Jeruk</td>
+            <td>5000</td>
+        </tr>
+        
+        <tr>
+            <td>4</td>
+            <td>Es Kelapa</td>
+            <td>5000</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Kopi</td>
+            <td>4000</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="3">Tambahan</th>
+        </tr>
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Harga</th>
+        </tr>
+
+        
+        <tr>
+            <td>1</td>
+            <td>Nasi Putih</td>
+            <td>4000</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Gorengan</td>
+            <td>2000</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Kerupuk Putih</td>
+            <td>2000</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Emping</td>
+            <td>5000</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Tahu</td>
+            <td>2000</td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Tempe</td>
+            <td>2000</td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Telor Ceplok</td>
+            <td>5000</td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Telor Dadar</td>
+            <td>5000</td>
+        </tr>
+
+    </table>
+</div>
+<hr style="margin: 10px 0;">
+<h2>Pesanan</h2>
+
+<form class="form-pesanan" action="">
+    <div class="container-pesanan-makanan">
+        <div class="p nasi-goreng">
+            <label for="">Nasi Goreng</label>
+            <input oninput="validateInput('nasi-goreng');" class="check" id="nasi-goreng" type="number">
+        </div>
+      
+        <div class="p ayam-goreng">
+            <label for="">Ayam Goreng</label>
+            <input oninput="validateInput('ayam-goreng');" class="check" id="ayam-goreng" type="number">
+        </div>
+
+        <div class="p baso-urat">
+            <label for="">Baso Urat</label>
+            <input oninput="validateInput('baso-urat');" class="check" id="baso-urat" type="number">
+        </div>
+
+        <div class="p sate-ayam">
+            <label for="">Sate Ayam</label>
+            <input oninput="validateInput('sate-ayam');" class="check" id="sate-ayam" type="number">
+        </div>
+      
+        <div class="p mie-ayam">
+            <label for="">Mie Ayam</label>
+            <input oninput="validateInput('mie-ayam');" class="check" id="mie-ayam" type="number">
+        </div>
+
+        <div class="p mie-instant">
+            <label for="">Mie Instant</label>
+            <input oninput="validateInput('mie-instant');" class="check" id="mie-instant" type="number">
+        </div>
+    </div>
+
+    <div class="container-pesanan-minuman">
+        <div class="p air-putih">
+            <label for="">Air Putih</label>
+            <input oninput="validateInput('air-putih');" class="check"  id="air-putih" type="number">
+        </div>
+      
+        <div class="p teh-manis-anget">
+            <label for="">Teh </label>
+            <input oninput="validateInput('TEH');" class="check" id="TEH" type="number">
+        </div>
+
+        <div class="p es-jeruk">
+            <label for="">Es Jeruk</label>
+            <input oninput="validateInput('es-jeruk');" class="check" id="es-jeruk" type="number">
+        </div>
+
+        <div class="p es-kelapa">
+            <label for="">Es Kelapa </label>
+            <input oninput="validateInput('es-kelapa');" class="check" id="Es Kelapa" type="number">
+        </div>
+
+        <div class="p kopi">
+            <label for="">Kopi</label>
+            <input oninput="validateInput('kopi');" class="check" id="kopi" type="number">
+        </div>
+    </div>
+
+    <div class="container-pesanan-tambahan">
+        <div class="p nasi-putih">
+            <label for="">Nasi Putih</label>
+            <input oninput="validateInput('nasi-putih');" class="check" id="nasi-putih" type="number">
+        </div>
+      
+        <div class="p gorengan">
+            <label for="">Gorengan</label>
+            <input oninput="validateInput('gorengan');" class="check" id="gorengan" type="number">
+        </div>
+
+        <div class="p kerupuk-putih">
+            <label for="">Kerupuk Putih</label>
+            <input oninput="validateInput('kerupuk-putih');" class="check" id="kerupuk-putih" type="number">
+        </div>
+
+        <div class="p tahu">
+            <label for="">Tahu</label>
+            <input oninput="validateInput('tahu');" class="check" id="tahu" type="number">
+        </div>
+
+        <div class="p tempe">
+            <label for="">Tempe</label>
+            <input oninput="validateInput('tempe');" class="check" id="tempe" type="number">
+        </div>
+
+        <div class="p telor-ceplok">
+            <label for="">Telor Ceplok</label>
+            <input oninput="validateInput('telor-ceplok');" class="check" id="telor-ceplok" type="number">
+        </div>
+
+        <div class="p telor-dadar">
+            <label for="">Telor Dadar</label>
+            <input oninput="validateInput('telor-dadar');" class="check" id="telor-dadar" type="number">
+        </div>
+    </div>
+</form>
+
+
+<input type="button" value="Masukin Data" onclick="setOutput();">
+
+
+<div id="billing-pelanggan">
+    <p id="output-nasi-goreng"></p>
+    <p id="output-ayam-goreng"></p>
+    <p id="output-billing"></p>
+</div>
+
+
+</article>
+<br><br><br><br><br>
+</body>
+<script>
+    
+</script>
+<script src="appku.js">
+
+</script>
+</html>
