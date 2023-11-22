@@ -174,121 +174,81 @@
 <hr style="margin: 10px 0;">
 <h2>Pesanan</h2>
 
-<form class="form-pesanan" action="">
-    <div class="container-pesanan-makanan">
-        <div class="p nasi-goreng">
-            <label for="">Nasi Goreng</label>
-            <input oninput="validateInput('nasi-goreng');" class="check" id="nasi-goreng" type="number">
-        </div>
-      
-        <div class="p ayam-goreng">
-            <label for="">Ayam Goreng</label>
-            <input oninput="validateInput('ayam-goreng');" class="check" id="ayam-goreng" type="number">
-        </div>
-
-        <div class="p baso-urat">
-            <label for="">Baso Urat</label>
-            <input oninput="validateInput('baso-urat');" class="check" id="baso-urat" type="number">
-        </div>
-
-        <div class="p sate-ayam">
-            <label for="">Sate Ayam</label>
-            <input oninput="validateInput('sate-ayam');" class="check" id="sate-ayam" type="number">
-        </div>
-      
-        <div class="p mie-ayam">
-            <label for="">Mie Ayam</label>
-            <input oninput="validateInput('mie-ayam');" class="check" id="mie-ayam" type="number">
-        </div>
-
-        <div class="p mie-instant">
-            <label for="">Mie Instant</label>
-            <input oninput="validateInput('mie-instant');" class="check" id="mie-instant" type="number">
-        </div>
+<form method="post">
+    <select id="nama-pesanan" name="pesanan">
+        <option value="Nasi Goreng">Nasi Goreng</option>
+        <option value="Ayam Goreng">Ayam Goreng</option>
+        <option value="Baso Urat">Baso Urat</option>
+        <option value="Sate Ayam">Sate Ayam</option>
+        <option value="Mie Ayam">Mie Ayam</option>
+        <option value="Mie Instant">Mie Instant</option>
+        <option value="Air Putih">Air Putih</option>
+        <option value="Teh Manis/Anget">Teh Manis/Anget</option>
+        <option value="Es Jeruk">Es Jeruk</option>
+        <option value="Es Kelapa">Es Kelapa</option>
+        <option value="Kopi">Kopi</option>
+        <option value="Nasi Putih">Nasi Putih</option>
+        <option value="Gorengan">Gorengan</option>
+        <option value="Kerupuk Putih">Kerupuk Putih</option>
+        <option value="Emping">Emping</option>
+        <option value="Tahu">Tahu</option>
+        <option value="Tempe">Tempe</option>
+        <option value="Telor Ceplok">Telor Ceplok</option>
+        <option value="Telor Dadar">Telor Dadar</option>
+    </select>
+    <div class="container-update-input">
+        <input placeholder="max : 30" type="number" id="input-jumlah" oninput="validateInput('input-jumlah');">
+        <input type="button" id="update-data" value="Update" onclick="validateUpdate();">
+        <input type="button" value="Reset" onclick="resetin();">
+        <input type="button" value="Konfirmasi" onclick="validateConfirm();">
     </div>
 
-    <div class="container-pesanan-minuman">
-        <div class="p air-putih">
-            <label for="">Air Putih</label>
-            <input oninput="validateInput('air-putih');" class="check"  id="air-putih" type="number">
-        </div>
-      
-        <div class="p teh-manis-anget">
-            <label for="">Teh </label>
-            <input oninput="validateInput('TEH');" class="check" id="TEH" type="number">
-        </div>
-
-        <div class="p es-jeruk">
-            <label for="">Es Jeruk</label>
-            <input oninput="validateInput('es-jeruk');" class="check" id="es-jeruk" type="number">
-        </div>
-
-        <div class="p es-kelapa">
-            <label for="">Es Kelapa </label>
-            <input oninput="validateInput('es-kelapa');" class="check" id="Es Kelapa" type="number">
-        </div>
-
-        <div class="p kopi">
-            <label for="">Kopi</label>
-            <input oninput="validateInput('kopi');" class="check" id="kopi" type="number">
-        </div>
-    </div>
-
-    <div class="container-pesanan-tambahan">
-        <div class="p nasi-putih">
-            <label for="">Nasi Putih</label>
-            <input oninput="validateInput('nasi-putih');" class="check" id="nasi-putih" type="number">
-        </div>
-      
-        <div class="p gorengan">
-            <label for="">Gorengan</label>
-            <input oninput="validateInput('gorengan');" class="check" id="gorengan" type="number">
-        </div>
-
-        <div class="p kerupuk-putih">
-            <label for="">Kerupuk Putih</label>
-            <input oninput="validateInput('kerupuk-putih');" class="check" id="kerupuk-putih" type="number">
-        </div>
-
-        <div class="p tahu">
-            <label for="">Tahu</label>
-            <input oninput="validateInput('tahu');" class="check" id="tahu" type="number">
-        </div>
-
-        <div class="p tempe">
-            <label for="">Tempe</label>
-            <input oninput="validateInput('tempe');" class="check" id="tempe" type="number">
-        </div>
-
-        <div class="p telor-ceplok">
-            <label for="">Telor Ceplok</label>
-            <input oninput="validateInput('telor-ceplok');" class="check" id="telor-ceplok" type="number">
-        </div>
-
-        <div class="p telor-dadar">
-            <label for="">Telor Dadar</label>
-            <input oninput="validateInput('telor-dadar');" class="check" id="telor-dadar" type="number">
-        </div>
-    </div>
+   
 </form>
 
+<div class="hasil" id="hasil-print">
+    <h2>Billing Pelanggan</h2>
+    <table id="billing-pelanggan">
+        <tr>
+            <th>Nama Pesanan</th>
+            <th>Jumlah Pesanan</th>
+            <th>Harga</th>
+            <th>Hapus</th>
+        </tr>
+ 
+    </table>
 
-<input type="button" value="Masukin Data" onclick="setOutput();">
+    <h2>Total Billing</h2>
+    <table>
+        <tr>
+            <th>Nama Pembeli</th>
+            <th>Total Harga</th>
+            <th>Waktu</th>
+        </tr>
+        <tr id="total-harga">
 
+        </tr>
+    </table>
 
-<div id="billing-pelanggan">
-    <p id="output-nasi-goreng"></p>
-    <p id="output-ayam-goreng"></p>
-    <p id="output-billing"></p>
+    <h2>Riwayat Pembelian</h2>
+
+    <table id="riwayat-pembelian">
+        <tr>
+            <th>No</th>
+            <th>Nama Pembeli</th>
+            <th>Total Harga</th>
+            <th>Waktu</th>
+        </tr>
+ 
+    </table>
 </div>
 
+<br><br><br><br><br>
 
 </article>
-<br><br><br><br><br>
+
 </body>
-<script>
-    
-</script>
+
 <script src="appku.js">
 
 </script>

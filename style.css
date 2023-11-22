@@ -33,7 +33,7 @@ table {
 }
 
 article {
-    width: 90%;
+    width: fit-content;
 }
 
 tr, td, th {
@@ -54,39 +54,12 @@ tr:last-child:hover {
     background-color: rgb(240, 228, 228);
 }
 
-.form-pesanan {
-    display: flex;
-    gap: 8px;
-    justify-content: space-between;
-}
 
 .p {
     display: flex;
     gap: 10px;
 }
 
-.container-pesanan {
-    display: flex;
-    flex-direction: column;
-}
-
-.container-pesanan-makanan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.container-pesanan-minuman {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.container-pesanan-tambahan {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
 
 label {
     width: 120px;
@@ -94,9 +67,134 @@ label {
 }
 
 input[type="number"]{
-    width: 70px;
+    padding: 0.625rem 0.575rem;
+}
+
+#update-data {
+    padding: 0.625rem 0.575rem;
+}
+
+form {
+    display: flex;
+    flex-direction:column;
+    gap: 8px;
+}
+
+.container-update-input {
+    display: grid;
+    gap: 8px;
+    flex-basis: 1;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+h2 {
+    text-align: left;
+}
+
+.container-update-input input {
+    padding: 0.625rem 0.575rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Untuk Firefox */
+}
+
+select {
+    width: 275px;
+    padding: 0.625rem 0.575rem;
+}
+
+.hasil {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 2;
+    flex-basis: auto;
 }
 
 .check {
     display: inline;
 }
+
+
+/* Media Query for Phones */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+    }
+
+    article {
+        width: 40vh;
+    }
+
+    .tampilan-menu {
+       width: fit-content;
+        flex-wrap: wrap;
+    }
+
+    .container-update-input {
+
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr
+}
+
+    table {
+        font-size: 0.8em;
+        width: 100%;
+        overflow-x: auto;
+    }
+    select {
+        width: 100%;
+    }
+
+}
+
+/* Media Query for Medium-sized Phones */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem;
+    }
+
+    article {
+        width: 40vh;
+    }
+
+    .tampilan-menu {
+       width: fit-content;
+        flex-wrap: wrap;
+    }
+    
+
+    table {
+        font-size: 0.8em;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    select {
+        width: 100%;
+    }
+
+    .container-update-input {
+
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr
+    }
+}
+
+
+
